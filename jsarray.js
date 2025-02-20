@@ -6,6 +6,7 @@
 let fruits = ['apple', 'banana'];
 fruits.push('orange');
 console.log('fruits:',fruits)
+//fruits: [ 'apple', 'banana', 'orange' ]
 
 // *pop()
 
@@ -13,9 +14,9 @@ console.log('fruits:',fruits)
 let cars = ['skoda', 'vw', 'toyota'];
 cars.pop();
 console.log('cars:',cars)
+//cars: [ 'skoda', 'vw' ]
 
 //shift()
-
 //Remember: Removes and returns the first element of an array
 
 let brands = ['hp','dell','apple'];
@@ -28,13 +29,14 @@ console.log(firstBrand); //hp
 let stup = ['set','get','put'];
 stup.unshift('lal');
 console.log(stup);
+//[ 'lal', 'set', 'get', 'put' ]
 
 // slice()
 // What it does: Returns a shallow copy of a portion of an array into a new array object.
 
 let good_fruits = ['apple', 'banana', 'orange', 'pear'];
 let citrus = good_fruits.slice(2, 4); // start at index 2, end before index 4
-console.log(citrus);
+console.log(citrus);//[ 'orange', 'pear' ]
 //Remember: slice is like slicing a portion of a cake, without altering the original.
 
 // splice()
@@ -54,6 +56,7 @@ console.log(all_fruits); // ['apple', 'grape', 'kiwi', 'orange', 'pear']
 let numbers = [1, 4, 9];
 let roots = numbers.map(Math.sqrt);
 console.log(roots);
+//[ 1, 2, 3 ]
 
 // filter()
 // What it does: Creates a new array with all elements that pass the test implemented by the provided function.
@@ -61,18 +64,22 @@ console.log(roots);
 let all_numbers = [1, 2, 3, 4, 5];
 let even = all_numbers.filter(num => num % 2 === 0);
 console.log(even);
+//[ 2, 4 ]
 
 // reduce()
 // What it does: Applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
 
 let values = [1, 2, 3, 4]
 let sum = values.reduce((acc, val) => acc + val, 0);
-console.log(sum);
+console.log(sum);//10
 
 //forEach()
 // What it does: Executes a provided function once for each array element.
 let animals = ['cat','dog','bird'];
 animals.forEach(animal => console.log(animal));
+// cat
+// dog
+// bird
 
 // some()
 // What it does: Tests whether at least one element in the array passes the test implemented by the provided function.
